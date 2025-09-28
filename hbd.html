@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Harisri! 🎂</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background: #fff0f5;
+            padding: 50px;
+            color: #333;
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 3em;
+        }
+
+        .photo {
+            width: 300px;
+            border-radius: 15px;
+            margin: 20px auto;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            background: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Happy Birthday,Harisri! 🎂🎉</h1>
+
+    <p>You’re my dearest friend and destined to become an amazing Dr. 🩺❤️</p>
+
+   
+
+   
+
+    <button onclick="showSurprise()">Your Special Message 🎁</button>
+
+    <script>
+        function showSurprise() {
+            alert("EE msg delete chesa edi only birthday roju cheppali😅😜");
+        }
+
+        // Simple confetti effect Dear Harisri, from the 9th class till now, every moment we shared has been pure magic. You are my family, my inspiration. Happy Birthday ❤️ – Harshith 🎶
+        (function () {
+            var confettiContainer = document.createElement('div');
+            confettiContainer.classList.add('confetti');
+            document.body.appendChild(confettiContainer);
+
+            for (let i = 0; i < 100; i++) {
+                let particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = '10px';
+                particle.style.height = '10px';
+                particle.style.backgroundColor = '#ff4081';
+                particle.style.left = Math.random() * window.innerWidth + 'px';
+                particle.style.top = Math.random() * window.innerHeight + 'px';
+                particle.style.opacity = Math.random();
+                confettiContainer.appendChild(particle);
+
+                (function animate(p) {
+                    let top = parseInt(p.style.top);
+                    function fall() {
+                        if (top < window.innerHeight) {
+                            top += 2;
+                            p.style.top = top + 'px';
+                            requestAnimationFrame(fall);
+                        } else {
+                            top = 0;
+                            p.style.top = top + 'px';
+                            fall();
+                        }
+                    }
+                    fall();
+                })(particle);
+            }
+        })();
+    </script>
+</body>
+
+</html>
